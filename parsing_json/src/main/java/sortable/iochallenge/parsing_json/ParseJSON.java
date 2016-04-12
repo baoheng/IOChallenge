@@ -2,6 +2,7 @@
 package sortable.iochallenge.parsing_json;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,9 +37,8 @@ public class ParseJSON {
     BufferedReader input = null;
     Gson gson = new Gson();
     try {
-      input = new BufferedReader(new InputStreamReader(
-          MatchProductListings.class.getClassLoader().getResource(fileName).openStream(),
-          StandardCharsets.UTF_8));
+      input = new BufferedReader(
+          new InputStreamReader(new FileInputStream("products.txt"), StandardCharsets.UTF_8));
       while ((line = input.readLine()) != null) {
         list.add(gson.fromJson(line, Product.class));
       }
@@ -68,9 +68,8 @@ public class ParseJSON {
     BufferedReader input = null;
     Gson gson = new Gson();
     try {
-      input = new BufferedReader(new InputStreamReader(
-          MatchProductListings.class.getClassLoader().getResource(fileName).openStream(),
-          StandardCharsets.UTF_8));
+      input = new BufferedReader(
+          new InputStreamReader(new FileInputStream("listings.txt"), StandardCharsets.UTF_8));
       while ((line = input.readLine()) != null) {
         Listing cur = gson.fromJson(line, Listing.class);
         if (map.containsKey(cur.getManufacturer())) {
