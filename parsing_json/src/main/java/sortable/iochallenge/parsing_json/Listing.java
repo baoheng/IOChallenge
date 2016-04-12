@@ -1,9 +1,9 @@
-/**
- *
- */
+
 package sortable.iochallenge.parsing_json;
 
 /**
+ * This represents a Listing with title, manufacturer, currency, price
+ *
  * @author bhling
  *
  */
@@ -15,10 +15,12 @@ public class Listing {
   private String price;
 
   /**
-   * @param title
-   * @param manufacturer
-   * @param currency
-   * @param price
+   * This creates a Listings given title, manufacturer, currency and price
+   *
+   * @param title the title of the listing
+   * @param manufacturer the manufacturer of the listing
+   * @param currency the currency for this listing
+   * @param price the price of this listing
    */
   public Listing(String title, String manufacturer, String currency, String price) {
     super();
@@ -29,28 +31,28 @@ public class Listing {
   }
 
   /**
-   * @return the title
+   * @return the title of the listing
    */
   public String getTitle() {
     return this.title;
   }
 
   /**
-   * @return the manufacturer
+   * @return the manufacturer of the listing
    */
   public String getManufacturer() {
     return this.manufacturer;
   }
 
   /**
-   * @return the currency
+   * @return the currency for the listing
    */
   public String getCurrency() {
     return this.currency;
   }
 
   /**
-   * @return the price
+   * @return the price for this listing
    */
   public String getPrice() {
     return this.price;
@@ -63,10 +65,10 @@ public class Listing {
   public int hashCode() {
     final int prime = 31;
     int result = 1;
-    result = prime * result + (this.currency == null ? 0 : this.currency.hashCode());
-    result = prime * result + (this.manufacturer == null ? 0 : this.manufacturer.hashCode());
-    result = prime * result + (this.price == null ? 0 : this.price.hashCode());
-    result = prime * result + (this.title == null ? 0 : this.title.hashCode());
+    result = (prime * result) + (this.currency == null ? 0 : this.currency.hashCode());
+    result = (prime * result) + (this.manufacturer == null ? 0 : this.manufacturer.hashCode());
+    result = (prime * result) + (this.price == null ? 0 : this.price.hashCode());
+    result = (prime * result) + (this.title == null ? 0 : this.title.hashCode());
     return result;
   }
 

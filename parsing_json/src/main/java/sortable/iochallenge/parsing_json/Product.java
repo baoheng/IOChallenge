@@ -1,9 +1,10 @@
-/**
- *
- */
+
 package sortable.iochallenge.parsing_json;
 
 /**
+ * This represents a Product with its attributes: product_name, manufacturer, family, model,
+ * announced_date
+ *
  * @author bhling
  *
  */
@@ -16,11 +17,13 @@ public class Product {
   private String announced_date;
 
   /**
-   * @param product_name
-   * @param manufacturer
-   * @param family
-   * @param model
-   * @param announced_date
+   * This creates a Product given product_name, manufacturer, family, model, annound_date
+   *
+   * @param product_name the name of the product
+   * @param manufacturer the maker of the product
+   * @param family the family of the product
+   * @param model the model of the product
+   * @param announced_date the announced date of the product
    */
   public Product(String product_name, String manufacturer, String family, String model,
       String announced_date) {
@@ -33,35 +36,35 @@ public class Product {
   }
 
   /**
-   * @return the product_name
+   * @return the name of the product
    */
   public String getProduct_name() {
     return this.product_name;
   }
 
   /**
-   * @return the manufacturer
+   * @return the manufacturer of the product
    */
   public String getManufacturer() {
     return this.manufacturer;
   }
 
   /**
-   * @return the family
+   * @return the family of the product
    */
   public String getFamily() {
     return this.family;
   }
 
   /**
-   * @return the model
+   * @return the model of the product
    */
   public String getModel() {
     return this.model;
   }
 
   /**
-   * @return the announced_date
+   * @return the announced date of the product
    */
   public String getAnnounced_date() {
     return this.announced_date;
@@ -74,11 +77,11 @@ public class Product {
   public int hashCode() {
     final int prime = 31;
     int result = 1;
-    result = prime * result + (this.announced_date == null ? 0 : this.announced_date.hashCode());
-    result = prime * result + (this.family == null ? 0 : this.family.hashCode());
-    result = prime * result + (this.manufacturer == null ? 0 : this.manufacturer.hashCode());
-    result = prime * result + (this.model == null ? 0 : this.model.hashCode());
-    result = prime * result + (this.product_name == null ? 0 : this.product_name.hashCode());
+    result = (prime * result) + (this.announced_date == null ? 0 : this.announced_date.hashCode());
+    result = (prime * result) + (this.family == null ? 0 : this.family.hashCode());
+    result = (prime * result) + (this.manufacturer == null ? 0 : this.manufacturer.hashCode());
+    result = (prime * result) + (this.model == null ? 0 : this.model.hashCode());
+    result = (prime * result) + (this.product_name == null ? 0 : this.product_name.hashCode());
     return result;
   }
 

@@ -1,11 +1,11 @@
-/**
- *
- */
+
 package sortable.iochallenge.parsing_json;
 
 import java.util.List;
 
 /**
+ * This represents a Result with product_name and list of listings
+ *
  * @author bhling
  *
  */
@@ -15,8 +15,10 @@ public class Result {
   private List<Listing> listings;
 
   /**
-   * @param product_name
-   * @param listings
+   * This creates a Result given a product_name and list of listings
+   *
+   * @param product_name the name of the product
+   * @param listings the list of listings for this product
    */
   public Result(String product_name, List<Listing> listings) {
     super();
@@ -25,14 +27,14 @@ public class Result {
   }
 
   /**
-   * @return the product_name
+   * @return the name of the product
    */
   public String getProduct_name() {
     return this.product_name;
   }
 
   /**
-   * @return the listings
+   * @return the list of listings
    */
   public List<Listing> getListings() {
     return this.listings;
